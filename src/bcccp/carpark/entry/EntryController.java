@@ -35,6 +35,7 @@ public class EntryController
                 this.outsideSensor = os;
                 this.insideSensor = is;
                 this.ui = ui;
+		ui.display("Press Button");
 	}
 
 
