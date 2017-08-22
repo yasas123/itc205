@@ -31,6 +31,7 @@ public class EntryController
 			IEntryUI ui) {
 		this.carpark = carpark;
 		this.entryGate = entryGate;
+		this.insideSensor = os;
 		
 		//TODO Implement constructor
 		
