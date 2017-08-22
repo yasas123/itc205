@@ -32,8 +32,7 @@ public class ExitController
 		this.exitGate = exitGate;
 		this.insideSensor = is;
 		this.outsideSensor = os;
-		
-		
+		this.ui = ui;	
 	}
 
 
