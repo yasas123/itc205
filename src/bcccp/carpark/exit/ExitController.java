@@ -29,6 +29,8 @@ public class ExitController
 			IExitUI ui) {
 		//TODO Implement constructor
 		this.carpark = carpark;
+		this.exitGate = exitGate;
+		
 	}
 
 
