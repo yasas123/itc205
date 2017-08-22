@@ -32,6 +32,8 @@ public class EntryController
 		//TODO Implement constructor
 		this.carpark = carpark;
 		this.outsideSensor = entryGate;
+		this.insideSensor = os;
+		
 		
 		
 		
