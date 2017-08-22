@@ -6,6 +6,7 @@ import bcccp.carpark.ICarSensorResponder;
 import bcccp.carpark.ICarpark;
 import bcccp.carpark.IGate;
 import bcccp.tickets.adhoc.IAdhocTicket;
+import java.util.Scanner;
 
 public class ExitController 
 		implements ICarSensorResponder,
@@ -40,6 +41,7 @@ public class ExitController
 	@Override
 	public void ticketInserted(String ticketStr) {
 		// TODO Auto-generated method stub
+		Scanner exitticket = new Scanner(System.in);
 		System.out.println("please insert the ticket"); 
 		
 	}
