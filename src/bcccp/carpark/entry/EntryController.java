@@ -32,7 +32,7 @@ public class EntryController
 		this.carpark = carpark;
 		this.entryGate = entryGate;
 		this.insideSensor = os;
-		
+		this.ui = ui;
 		//TODO Implement constructor
 		
 	}
