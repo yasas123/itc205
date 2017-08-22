@@ -30,6 +30,7 @@ public class ExitController
 		//TODO Implement constructor
 		this.carpark = carpark;
 		this.exitGate = exitGate;
+		this.insideSensor = is;
 		
 	}
 
