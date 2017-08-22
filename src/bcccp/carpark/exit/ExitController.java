@@ -31,6 +31,8 @@ public class ExitController
 		this.carpark = carpark;
 		this.exitGate = exitGate;
 		this.insideSensor = is;
+		this.outsideSensor = os;
+		
 		
 	}
 
