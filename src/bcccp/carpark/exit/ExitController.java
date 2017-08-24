@@ -83,6 +83,25 @@ public class ExitController
 				setState(prevState);
 				}
 				break;
+				case IDLE:
+				log("eventDetected: IDLE");
+				if (detectorId.equals(is.getId()) && carDetected){
+					log("eventDetected: setting state to waiting");
+					setState(STATE.WAITING);
+				}
+				else if (detectorId.equals(os.getId()) && carDetected){
+					setState(STATE.BLOCKED);
+				break;
+			case WAITING:
+			case PROCESSED:
+				if (detectorId.equals(is.getId()) && !carDetected){
+					setState(STATE.IDLE);
+				}
+				else if (detectorId.equals(os.getId()) && carDetected){
+					setState(STATE.BLOCKED);
+				}
+				break;
+			
 			
 					
 		}
