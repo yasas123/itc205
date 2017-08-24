@@ -117,6 +117,14 @@ public class ExitController
 					setState(STATE.TAKEN);
 				}
 				break;
+			case EXITED:
+				if (detectorId.equals(is.getId()) && carDetected){
+					setState(STATE.EXITING);
+				}
+				else if (detectorId.equals(os.getId()) && !carDetected){
+					setState(STATE.IDLE);
+				}
+				break;
 			
 					
 		}
