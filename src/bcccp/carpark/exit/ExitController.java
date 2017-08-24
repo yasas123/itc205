@@ -56,6 +56,11 @@ public class ExitController
 
 	@Override
 	public void ticketTaken() {
+		if (state == STATE.PROCESSED) {
+		exitGate.raise();
+		setState(STATE.TAKEN);
+		}
+		
 		// TODO Auto-generated method stub
 		
 	}
