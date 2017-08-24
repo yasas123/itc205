@@ -63,7 +63,10 @@ public class ExitController
 		else if (state == STATE.PROCESSED){
 		setState(STATE.WAITING);
 		}
-		
+		else{
+		ui.beep();
+		log("ticketTaken - called in incorrect state");
+		}
 		
 		// TODO Auto-generated method stub
 		
