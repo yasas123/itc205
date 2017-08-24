@@ -37,6 +37,7 @@ public class ExitController
 		
 		os.registerResponder(this);
 		is.registerResponder(this);
+		ui.registerController(this);
 		
 		
 	}
