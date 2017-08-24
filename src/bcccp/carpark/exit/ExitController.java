@@ -125,7 +125,8 @@ public class ExitController
 					setState(STATE.IDLE);
 				}
 				break;
-			
+			default:
+				break:
 					
 		}
 		
