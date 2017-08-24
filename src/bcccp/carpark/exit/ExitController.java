@@ -60,6 +60,10 @@ public class ExitController
 		exitGate.raise();
 		setState(STATE.TAKEN);
 		}
+		else if (state == STATE.PROCESSED){
+		setState(STATE.WAITING);
+		}
+		
 		
 		// TODO Auto-generated method stub
 		
