@@ -21,11 +21,32 @@ public class PaystationController
 
 
 	@Override
-	public void ticketInserted(String barcode) {
-		// TODO Auto-generated method stub
+	public void ticketInserted(String ticketstr) {
 		
+	if (state == STATE.WAITING) {
+		if adhocTicket = carpark.getAdhocTicket (ticketstr);
+		exitTime = System.currentTimeMillis ();
+		if (adhocTicket != null && adhocTicket.isPaid()) {
+			setState(STATE.PROCESSED);
+		}
+		else {
+			ui.beep ();
+			setState(STATE.REJECTED);
+		}
 	}
-
+		else if (carpark.isSeasonTicketValid(ticketStr) &&
+			 carpark.isSeasonTicketInUse (ticketStr)){
+			seasonTicketId = ticketStr;
+			setState(STATE.PROCESSED);
+		}
+	else {
+		ui.beep();
+		setState(STATE.REJECTED);
+	}
+	}
+	else {
+		ui.beep ();
+	}
 
 
 	@Override
@@ -38,8 +59,18 @@ public class PaystationController
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
 		
+		if (state == STATE.PROCESSED) {
+			exitGate.raise();
+			setState(STATE.TAKEN);
+	}
+	else if (state == STATE.REJECTED) {
+		setState(STATE.WAITING) ;
+	}
+	else {
+		ui.beep();
+		log("ticketTaken: called while in incorrect state");
+	}
 	}
 
 	
