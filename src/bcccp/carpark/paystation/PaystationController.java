@@ -64,6 +64,7 @@ public class PaystationController
 	@Override
 	public void ticketTaken() {
 		
+		
 		if (state == STATE.PROCESSED) {
 			exitGate.raise();
 			setState(STATE.TAKEN);
