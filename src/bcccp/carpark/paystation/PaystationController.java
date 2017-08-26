@@ -46,6 +46,10 @@ public class PaystationController
 	}
 	else {
 		ui.beep ();
+		ui.discardTicket();
+		log("ticketInserted: called while in incorrect state");
+		setState(STATE.REJECTED);
+	}
 	}
 
 
