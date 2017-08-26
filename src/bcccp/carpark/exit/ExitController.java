@@ -67,7 +67,7 @@ public class ExitController
 		ui.beep();
 		log("ticketTaken - called in incorrect state");
 		}
-		
+		system.out.println("please take the ticket back");
 		// TODO Auto-generated method stub
 		
 	}
